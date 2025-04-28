@@ -18,4 +18,4 @@ jobs:
           username: aesaonline1
           password: ${{ secrets.LOCAWEB_PASSWORD }}
           local-dir: ./
-          server-dir: public_html/ 
+          server-dir: /home/aesaonline1/public_html/ 
