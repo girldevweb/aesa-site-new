@@ -108,7 +108,7 @@ async function exibirSermoes() {
 
         // Limpar loading state
         playlist.innerHTML = '';
-
+        
         // Adicionar cada sermão à playlist
         sermons.forEach(sermon => {
             const sermonElement = document.createElement('div');
@@ -362,14 +362,14 @@ async function carregarSermao(sermao, shouldPlay = false) {
         
         if (shouldPlay) {
             await audioPlayer.play();
-            isPlaying = true;
-            playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                    isPlaying = true;
+                    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
             retryCount = 0;
             removerLoading(loadingElement);
             clearTimeout(loadingTimeout);
         }
     } catch (error) {
-        console.error('Erro ao reproduzir:', error);
+                    console.error('Erro ao reproduzir:', error);
         removerLoading(loadingElement);
         clearTimeout(loadingTimeout);
         
@@ -412,12 +412,12 @@ playBtn.addEventListener('click', () => {
         playBtn.innerHTML = '<i class="fas fa-play"></i>';
     } else {
         audioPlayer.play()
-            .then(() => {
-                isPlaying = true;
-                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
-            })
-            .catch(error => {
-                console.error('Erro ao reproduzir:', error);
+                .then(() => {
+                    isPlaying = true;
+                    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                })
+                .catch(error => {
+                    console.error('Erro ao reproduzir:', error);
                 if (isOneDrive) {
                     alert('Não foi possível reproduzir o áudio do OneDrive. Por favor, tente novamente ou use um navegador diferente.');
                 } else {
@@ -432,7 +432,7 @@ prevBtn.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
         carregarSermao(listaSermoes[currentIndex], true);
-        atualizarPlaylist();
+    atualizarPlaylist();
     }
 });
 
@@ -440,7 +440,7 @@ nextBtn.addEventListener('click', () => {
     if (currentIndex < listaSermoes.length - 1) {
         currentIndex++;
         carregarSermao(listaSermoes[currentIndex], true);
-        atualizarPlaylist();
+    atualizarPlaylist();
     }
 });
 
@@ -455,7 +455,7 @@ audioPlayer.addEventListener('loadedmetadata', () => {
     // Atualizar duração na lista de sermões
     if (listaSermoes[currentIndex]) {
         listaSermoes[currentIndex].duration = audioPlayer.duration;
-        atualizarPlaylist();
+    atualizarPlaylist();
     }
 });
 
