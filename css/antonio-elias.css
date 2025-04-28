@@ -1,0 +1,279 @@
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(147, 197, 114, 0.1), rgba(147, 197, 114, 0.2));
+  padding: calc(var(--header-height) + 4rem) 0 4rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+/* Seções Gerais */
+.inicio-section,
+.conversao-section,
+.ministerio-section,
+.evangelismo-section,
+.legado-section {
+  padding: 5rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.inicio-section,
+.ministerio-section,
+.legado-section {
+  background: #fff;
+}
+
+.conversao-section,
+.evangelismo-section {
+  background: #f8f8f8;
+}
+
+/* Grid Sections */
+.inicio-grid,
+.conversao-grid,
+.ministerio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Imagens */
+.inicio-imagem img,
+.conversao-imagem img,
+.ministerio-imagem img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+}
+
+.inicio-imagem img:hover,
+.conversao-imagem img:hover,
+.ministerio-imagem img:hover {
+  transform: translateY(-5px);
+}
+
+/* Textos */
+.inicio-texto,
+.conversao-texto,
+.ministerio-texto {
+  padding: 2rem;
+}
+
+.inicio-texto h2,
+.conversao-texto h2,
+.ministerio-texto h2,
+.evangelismo-section h2,
+.legado-section h2 {
+  font-size: 2rem;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.inicio-texto h2::after,
+.conversao-texto h2::after,
+.ministerio-texto h2::after,
+.evangelismo-section h2::after,
+.legado-section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background: #93c572;
+}
+
+.inicio-texto p,
+.conversao-texto p,
+.ministerio-texto p,
+.evangelismo-section p,
+.legado-section p {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Evangelismo Section */
+.evangelismo-section {
+  text-align: center;
+}
+
+.evangelismo-section h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.evangelismo-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Legado Section */
+.legado-section {
+  text-align: center;
+}
+
+.legado-section h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.legado-section p {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Animações */
+[data-anime] {
+  opacity: 0;
+  transition: .8s;
+}
+
+[data-anime="fade-right"] {
+  transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="fade-left"] {
+  transform: translate3d(50px, 0, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .inicio-grid,
+  .conversao-grid,
+  .ministerio-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .inicio-texto,
+  .conversao-texto,
+  .ministerio-texto {
+    padding: 1rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .inicio-texto h2,
+  .conversao-texto h2,
+  .ministerio-texto h2,
+  .evangelismo-section h2,
+  .legado-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .inicio-texto h2::after,
+  .conversao-texto h2::after,
+  .ministerio-texto h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .inicio-texto p,
+  .conversao-texto p,
+  .ministerio-texto p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: calc(var(--header-height) + 2rem) 0 2rem;
+  }
+
+  .inicio-section,
+  .conversao-section,
+  .ministerio-section,
+  .evangelismo-section,
+  .legado-section {
+    padding: 3rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+
+  .inicio-texto p,
+  .conversao-texto p,
+  .ministerio-texto p,
+  .evangelismo-section p,
+  .legado-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    hyphens: auto;
+  }
+}
+
+/* Previne rolagem horizontal */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Garante que as imagens não estourem */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Garante que as seções não estourem */
+.hero-section,
+.inicio-section,
+.conversao-section,
+.ministerio-section,
+.evangelismo-section,
+.legado-section {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Garante que os grids não estourem */
+.inicio-grid,
+.conversao-grid,
+.ministerio-grid {
+    width: 100%;
+    box-sizing: border-box;
+}

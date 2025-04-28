@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos - Antônio e Maria</title>
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/videos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <a href="/" class="logo">Antônio <i class="fas fa-heart"></i> Maria</a>
+
+            <!-- Navegação Principal -->
+            <nav class="nav-desktop">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Biografias</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="antonio-elias.html">Rev. Antônio Elias</a></li>
+                            <li><a href="maria-jose.html">Profa. Maria José</a></li>
+                            <li><a href="historia-casal.html">História do Casal</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Sermões</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sermoes.html">Audios</a></li>
+                            <li><a href="videos.html">Videos</a></li>
+                            <li><a href="oracoes.html">Orações</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Livros</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="livros.html">Biblioteca</a></li>
+                            <li><a href="esbocos.html">Esboços</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Depoimentos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/depoimentos-antonio">Cartas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="/sobre" class="nav-link">Sobre Nós</a></li>
+                </ul>
+            </nav>
+
+            <!-- Barra de Pesquisa -->
+            <div class="search-container">
+                <button class="search-toggle" type="button" aria-label="Abrir pesquisa">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="search-box">
+                    <input type="text" placeholder="Pesquisar..." autocomplete="off" class="search-input">
+                    <div class="search-results"></div>
+                </div>
+            </div>
+
+            <!-- Botão Menu Mobile -->
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Menu Mobile -->
+            <nav class="nav-mobile">
+                <div class="mobile-search">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <ul class="mobile-nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Biografias</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="antonio-elias.html">Rev. Antônio Elias</a></li>
+                            <li><a href="maria-jose.html">Profa. Maria José</a></li>
+                            <li><a href="historia-casal.html">História do Casal</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Sermões</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sermoes.html">Audios</a></li>
+                            <li><a href="videos.html">Videos</a></li>
+                            <li><a href="oracoes.html">Orações</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="livros.html" class="nav-link">Livros</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Depoimentos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/depoimentos-antonio">Rev. Antônio Elias</a></li>
+                            <li><a href="/depoimentos-maria">Maria José</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="/sobre" class="nav-link">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="videos-page">
+        <div class="container">
+            <!-- Título da Página -->
+            <div class="page-header">
+                <h1>Sermões em Vídeo</h1>
+                <p>Assista aos sermões do Rev. Antônio Elias</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="filters">
+                <div class="search-filter">
+                    <input type="text" placeholder="Buscar sermão..." class="search-input">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="filter-group">
+                    <select class="filter-select">
+                        <option value="">Todos os Anos</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="">Todos os Temas</option>
+                        <option value="evangelho">Evangelho</option>
+                        <option value="familia">Família</option>
+                        <option value="oracao">Oração</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grid de Vídeos -->
+            <div class="videos-grid">
+                <!-- Vídeo 1 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe 
+                            src="https://www.youtube.com/embed/P6hXFWJGPYQ" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>A Importância da Oração</h3>
+                        <div class="video-meta">
+                            <span class="video-date">15/03/2024</span>
+                            <span class="video-views">1.2k visualizações</span>
+                        </div>
+                        <p class="video-description">Neste sermão, o Rev. Antônio Elias fala sobre a importância da oração em nossas vidas.</p>
+                    </div>
+                </div>
+
+                <!-- Vídeo 2 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe 
+                            src="https://www.youtube.com/embed/SEU_ID_DO_VIDEO" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>O Poder do Evangelho</h3>
+                        <div class="video-meta">
+                            <span class="video-date">08/03/2024</span>
+                            <span class="video-views">2.5k visualizações</span>
+                        </div>
+                        <p class="video-description">Uma mensagem poderosa sobre o impacto do evangelho em nossas vidas.</p>
+                    </div>
+                </div>
+
+                <!-- Vídeo 3 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe 
+                            src="https://www.youtube.com/embed/SEU_ID_DO_VIDEO" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Família Cristã</h3>
+                        <div class="video-meta">
+                            <span class="video-date">01/03/2024</span>
+                            <span class="video-views">1.8k visualizações</span>
+                        </div>
+                        <p class="video-description">Reflexões sobre a importância da família na vida cristã.</p>
+                    </div>
+                </div>
+
+                <!-- Vídeo 4 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe 
+                            src="https://www.youtube.com/embed/SEU_ID_DO_VIDEO" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>O Caminho da Fé</h3>
+                        <div class="video-meta">
+                            <span class="video-date">22/02/2024</span>
+                            <span class="video-views">3.1k visualizações</span>
+                        </div>
+                        <p class="video-description">Uma mensagem inspiradora sobre a jornada da fé.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paginação -->
+            <div class="pagination">
+                <button class="pagination-button" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="pagination-button active">1</button>
+                <button class="pagination-button">2</button>
+                <button class="pagination-button">3</button>
+                <button class="pagination-button">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-col">
+                    <div class="footer-logo">Antônio <i class="fas fa-heart"></i> Maria</div>
+                    <p class="footer-desc">Um casal que dedicou suas vidas ao serviço de Deus e à propagação do Evangelho de Jesus Cristo.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/sermoes">Sermões</a></li>
+                        <li><a href="/livros">Livros</a></li>
+                        <li><a href="/galeria">Galeria</a></li>
+                        <li><a href="/sobre">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contato@antonioemaria.com.br">contato@antonioemaria.com.br</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+5511999999999">(11) 99999-9999</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>São Paulo, SP</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Antônio e Maria. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/modules/videos.js"></script>
+</body>
+</html> 

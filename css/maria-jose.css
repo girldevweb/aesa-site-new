@@ -1,0 +1,380 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo da Biografia */
+.biografia {
+    background: var(--color-white);
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    padding-top: var(--header-height);
+    line-height: 1.6;
+}
+
+.biografia .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.biografia-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho da Biografia */
+.biografia-cabecalho {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    position: relative;
+}
+
+.biografia-cabecalho::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--color-primary);
+}
+
+.biografia-cabecalho h1 {
+    font-size: 2.8rem;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+
+.autor-data {
+    color: var(--color-text-light);
+    font-style: italic;
+    font-size: 1.1rem;
+    position: relative;
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+.autor-data::before,
+.autor-data::after {
+    content: '•';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary);
+}
+
+.autor-data::before {
+    left: 0;
+}
+
+.autor-data::after {
+    right: 0;
+}
+
+/* Conteúdo da Biografia */
+.biografia-texto {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.biografia-texto p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.biografia-texto p:first-of-type::first-letter {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    float: left;
+    margin-right: 0.5rem;
+    line-height: 1;
+    font-family: var(--font-heading);
+    padding-top: 0.2rem;
+}
+
+/* Citações */
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: var(--color-bg-light);
+    border-left: 4px solid var(--color-primary);
+    font-style: italic;
+    position: relative;
+    border-radius: 0 8px 8px 0;
+    clear: both;
+}
+
+blockquote::before {
+    content: '"';
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+    font-size: 4rem;
+    color: var(--color-primary);
+    opacity: 0.2;
+    font-family: var(--font-heading);
+}
+
+blockquote p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+blockquote footer {
+    text-align: right;
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    font-style: normal;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Seção de Homenagem */
+.homenagem {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+    position: relative;
+}
+
+.homenagem::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: var(--color-primary);
+}
+
+.homenagem h2 {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.homenagem h3 {
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    margin: 2rem 0 1rem;
+    font-family: var(--font-heading);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.homenagem h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+}
+
+/* Imagens */
+.hero-image {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.02);
+}
+
+.image-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.02);
+}
+
+.image-caption {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    font-style: italic;
+}
+
+/* Imagens flutuantes */
+.float-left,
+.float-right {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.float-left {
+    float: left;
+    margin-right: 2rem;
+    margin-left: -1rem;
+}
+
+.float-right {
+    float: right;
+    margin-left: 2rem;
+    margin-right: -1rem;
+}
+
+.float-left:hover,
+.float-right:hover {
+    transform: scale(1.02);
+}
+
+/* Clearfix */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .biografia .container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .biografia-texto {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .biografia .container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .biografia-conteudo {
+        max-width: 100%;
+    }
+    
+    .biografia-texto {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .biografia-cabecalho h1 {
+        font-size: 2.2rem;
+    }
+
+    .biografia-texto {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .homenagem h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    blockquote {
+        margin: 1.2rem 0;
+        padding: 1.2rem;
+    }
+
+    .hero-image,
+    .image-container {
+        max-width: 100%;
+        margin: 2rem auto;
+    }
+
+    .hero-image img,
+    .image-container img {
+        border-radius: 4px;
+    }
+
+    .float-left,
+    .float-right {
+        width: 250px;
+        margin: 0 0 1.5rem 0;
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .biografia-cabecalho h1 {
+        font-size: 1.9rem;
+    }
+
+    .biografia-texto p:first-of-type::first-letter {
+        font-size: 3.5rem;
+    }
+
+    blockquote {
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+
+    .homenagem h3 {
+        margin: 1.5rem 0 0.8rem;
+    }
+
+    .hero-image,
+    .image-container {
+        margin: 1.5rem auto;
+    }
+
+    .image-caption {
+        font-size: 0.9rem;
+    }
+
+    .float-left,
+    .float-right {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 1rem;
+    }
+}
+

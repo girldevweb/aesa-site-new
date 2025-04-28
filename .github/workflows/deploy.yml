@@ -1,0 +1,22 @@
+name: Deploy to Locaweb
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Deploy to Locaweb
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.LOCAWEB_HOST }}
+          username: ${{ secrets.LOCAWEB_USERNAME }}
+          password: ${{ secrets.LOCAWEB_PASSWORD }}
+          source: "."
+          target: "/home/aesaonline/public_html"
+          strip_components: 1 

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AesaOnline</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+          <!-- Logo -->
+          <a href="/" class="logo">Antônio <i class="fas fa-heart"></i> Maria</a>
+
+          <!-- Navegação Principal -->
+          <nav class="nav-desktop">
+              <ul class="nav-list">
+                  <li><a href="/" class="nav-link">Home</a></li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)" class="nav-link">Biografias</a>
+                      <ul class="dropdown-menu">
+                          <li><a href="antonio-elias.html">Rev. Antônio Elias</a></li>
+                          <li><a href="maria-jose.html">Profa. Maria José</a></li>
+                          <li><a href="historia-casal.html">História do Casal</a></li>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)" class="nav-link">Sermões</a>
+                      <ul class="dropdown-menu">
+                          <li><a href="sermoes.html">Audios</a></li>
+                          <li><a href="videos.html">Videos</a></li>
+                          <li><a href="oracoes.html">Orações</a></li>
+                          
+                          
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)" class="nav-link">Livros</a>
+                      <ul class="dropdown-menu">
+                          <li><a href="livros.html">Biblioteca</a></li>
+                          <li><a href="esbocos.html">Esboços</a></li>
+                          
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)" class="nav-link">Depoimentos</a>
+                      <ul class="dropdown-menu">
+                          <li><a href="/depoimentos-antonio">Cartas</a></li>
+                          
+                      </ul>
+                  </li>
+                  <li><a href="/galeria" class="nav-link">Galeria</a></li>
+                  <li><a href="/sobre" class="nav-link">Sobre Nós</a></li>
+                  
+              </ul>
+          </nav>
+
+          <!-- Barra de Pesquisa -->
+          <div class="search-container">
+              <button class="search-toggle" type="button" aria-label="Abrir pesquisa">
+                  <i class="fas fa-search"></i>
+              </button>
+              <div class="search-box">
+                  <input type="text" placeholder="Pesquisar..." autocomplete="off" class="search-input">
+                  <div class="search-results"></div>
+              </div>
+          </div>
+
+          <!-- Botão Menu Mobile -->
+          <button class="mobile-toggle" aria-label="Menu">
+              <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Menu Mobile -->
+          <nav class="nav-mobile">
+              <div class="mobile-search">
+                  <input type="text" placeholder="Pesquisar...">
+                  <button type="submit">
+                      <i class="fas fa-search"></i>
+                  </button>
+              </div>
+              <ul class="mobile-nav-list">
+                  <li><a href="/" class="nav-link">Home</a></li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)" class="nav-link">Biografias</a>
+                      <ul class="dropdown-menu">
+                          <li><a href="antonio-elias.html">Rev. Antônio Elias</a></li>
+                          <li><a href="maria-jose.html">Profa. Maria José</a></li>
+                          <li><a href="historia-casal.html">História do Casal</a></li>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)" class="nav-link">Sermões</a>
+                      <ul class="dropdown-menu">
+                          <li><a href="sermoes.html">Audios</a></li>
+                          <li><a href="videos.html">Videos</a></li>
+                          <li><a href="oracoes.html">Orações</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="livros.html" class="nav-link">Livros</a></li>
+                  <li class="dropdown">
+                      <a href="javascript:void(0)" class="nav-link">Depoimentos</a>
+                      <ul class="dropdown-menu">
+                          <li><a href="/depoimentos-antonio">Rev. Antônio Elias</a></li>
+                          <li><a href="/depoimentos-maria">Maria José</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="/galeria" class="nav-link">Galeria</a></li>
+                  <li><a href="/sobre" class="nav-link">Sobre Nós</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+  
+  <main class="cartas-container">
+    <section class="cartas-hero">
+      <h1>Cartas de Gratidão</h1>
+      <p>Testemunhos de Vidas Transformadas pelo Amor e Dedicação do Rev. Antonio Elias e Maria José</p>
+    </section>
+
+    <section class="carta-item" data-aos="flip-left">
+      <div class="carta-imagem">
+        <img src="images/carta-1-depoimentos.png" alt="Carta de agradecimento" class="carta-img">
+      </div>
+      <div class="carta-conteudo">
+        <h2>Uma Luz na Escuridão</h2>
+        <p>"Em um momento de profunda tristeza e desespero, o Rev. Antonio Elias e Maria José foram como anjos enviados por Deus. Suas palavras de conforto e suas orações me deram forças para seguir em frente. Sou eternamente grato pelo amor e apoio que recebi deste casal abençoado."</p>
+        <p class="carta-autor">- João Silva</p>
+      </div>
+    </section>
+
+    <section class="carta-item" data-aos="flip-right">
+      <div class="carta-conteudo">
+        <h2>Renovação da Fé</h2>
+        <p>"Eu havia perdido minha fé e me afastado da igreja, mas o testemunho de vida do Rev. Antonio e Dona Maria José me inspirou a retornar. Sua dedicação incansável e amor genuíno pelas pessoas me mostraram o verdadeiro significado de ser um seguidor de Cristo."</p>
+        <p class="carta-autor">- Maria Oliveira</p>
+      </div>
+      <div class="carta-imagem">
+        <img src="images/carta-depoimentos.png" alt="Carta de testemunho" class="carta-img">
+      </div>
+    </section>
+
+    <section class="carta-item" data-aos="flip-up">
+      <div class="carta-imagem">
+        <img src="images/carta-depoimentos.png" alt="Carta de agradecimento" class="carta-img">
+      </div>
+      <div class="carta-conteudo">
+        <h2>Um Casamento Restaurado</h2>
+        <p>"Nosso casamento estava à beira do fim, mas graças ao aconselhamento amoroso e sábio do Rev. Antonio e Maria José, conseguimos superar nossas diferenças. Eles nos ensinaram o verdadeiro significado do perdão e do amor incondicional. Hoje, somos um casal feliz e grato."</p>
+        <p class="carta-autor">- Carlos e Ana Rodrigues</p>
+      </div>
+    </section>
+
+    <section class="carta-item" data-aos="flip-down">
+      <div class="carta-conteudo">
+        <h2>Apoio nos Momentos Difíceis</h2>
+        <p>"Durante minha luta contra o câncer, o Rev. Antonio e Dona Maria José estiveram ao meu lado em cada etapa. Suas visitas ao hospital, suas orações e seu apoio emocional foram fundamentais para minha recuperação. Eles são verdadeiros exemplos do amor de Cristo em ação."</p>
+        <p class="carta-autor">- Fernanda Santos</p>
+      </div>
+      <div class="carta-imagem">
+        <img src="images/carta-1-depoimentos.png" alt="Carta de gratidão" class="carta-img">
+      </div>
+    </section>
+
+    <section class="cartas-conclusao">
+      <h2>Um Legado de Amor</h2>
+      <p>Estas são apenas algumas das inúmeras vidas tocadas pelo ministério do Rev. Antonio Elias e Maria José. Seu amor, dedicação e fé inabalável continuam a inspirar e transformar vidas, deixando um legado duradouro de esperança e compaixão.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">AesaOnline</div>
+      <div class="quick-links">
+        <h3>Links Rápidos</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#biografia">Biografia</a></li>
+            <li><a href="sermoes.html">Sermões</a></li>
+            <li><a href="livros.html">Livros</a></li>
+            <li><a href="cartas.html">Depoimentos</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="sobre-nos.html">Sobre Nós</a></li>
+          </ul>
+      </div>
+      <div class="quick-links">
+        <h3>Ajuda</h3>
+        <ul>
+            <li><a href="index.html">Perguntas Frequentes</a></li>
+            
+        </ul>
+      </div>
+      <div class="quick-links">
+        <h3>Contato</h3>
+        <ul>
+          <li>aesaonline@gmail.com</li>
+        
+          
+        </ul>
+      </div>
+      <div class="social-media">
+        <h3>Siga-nos</h3>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2024 AesaOnline. Todos os direitos reservados.
+    </div>
+  </footer>
+ 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital - Livro</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/livro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+      <!-- Header -->
+     <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <a href="/" class="logo">Antônio <i class="fas fa-heart"></i> Maria</a>
+
+            <!-- Navegação Principal -->
+            <nav class="nav-desktop">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Biografias</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="antonio-elias.html">Rev. Antônio Elias</a></li>
+                            <li><a href="maria-jose.html">Profa. Maria José</a></li>
+                            <li><a href="historia-casal.html">História do Casal</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Sermões</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sermoes.html">Audios</a></li>
+                            <li><a href="videos.html">Videos</a></li>
+                            <li><a href="oracoes.html">Orações</a></li>
+                            
+                            
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Livros</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="livros.html">Biblioteca</a></li>
+                            <li><a href="esbocos.html">Esboços</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Depoimentos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/depoimentos-antonio">Cartas</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="/galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="/sobre" class="nav-link">Sobre Nós</a></li>
+                    
+                </ul>
+            </nav>
+
+            <!-- Barra de Pesquisa -->
+            <div class="search-container">
+                <button class="search-toggle" type="button" aria-label="Abrir pesquisa">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="search-box">
+                    <input type="text" placeholder="Pesquisar..." autocomplete="off" class="search-input">
+                    <div class="search-results"></div>
+                </div>
+            </div>
+
+            <!-- Botão Menu Mobile -->
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Menu Mobile -->
+            <nav class="nav-mobile">
+                <div class="mobile-search">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <ul class="mobile-nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Biografias</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="antonio-elias.html">Rev. Antônio Elias</a></li>
+                            <li><a href="maria-jose.html">Profa. Maria José</a></li>
+                            <li><a href="historia-casal.html">História do Casal</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Sermões</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sermoes.html">Audios</a></li>
+                            <li><a href="videos.html">Videos</a></li>
+                            <li><a href="oracoes.html">Orações</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="livros.html" class="nav-link">Livros</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Depoimentos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/depoimentos-antonio">Rev. Antônio Elias</a></li>
+                            <li><a href="/depoimentos-maria">Maria José</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="/sobre" class="nav-link">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="book-page">
+        <!-- Navegação Discreta -->
+        <nav class="page-nav">
+            <div class="container">
+                <a href="livros.html" class="nav-link">
+                    <i class="fas fa-arrow-left"></i>
+                    Voltar à Biblioteca
+                </a>
+            </div>
+        </nav>
+
+        <!-- Seção Principal -->
+        <section class="book-hero">
+            <div class="container">
+                <div class="book-grid">
+                    <!-- Coluna da Capa -->
+                    <div class="book-cover-column">
+                        <div class="cover-wrapper">
+                            <img id="bookCover" src="" alt="Capa do Livro" class="book-cover">
+                        </div>
+                        
+                        <!-- Ações Principais -->
+                        <div class="primary-actions">
+                            <button class="btn-primary">
+                                <i class="fas fa-book-reader"></i>
+                                Ler Agora
+                            </button>
+                            <div class="secondary-actions">
+                                <button class="btn-secondary">
+                                    <i class="fas fa-download"></i>
+                                    PDF
+                                </button>
+                                <button class="btn-secondary" id="audioBtn">
+                                    <i class="fas fa-headphones"></i>
+                                    Áudio
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna de Conteúdo -->
+                    <div class="book-content-column">
+                        <div class="book-header">
+                            <div class="book-meta">
+                                <span id="bookCategory" class="book-category"></span>
+                                <h1 id="bookTitle" class="book-title"></h1>
+                                <p id="bookAuthor" class="book-author"></p>
+                            </div>
+                        </div>
+
+                        <div class="book-description">
+                            <h2>Sobre o Livro</h2>
+                            <p id="bookDescription"></p>
+                        </div>
+
+                        <div class="book-details">
+                            <div class="details-grid">
+                                <div class="detail-item">
+                                    <span class="detail-icon"><i class="fas fa-user"></i></span>
+                                    <div class="detail-text">
+                                        <span class="detail-label">Autor</span>
+                                        <span id="bookAuthorDetail" class="detail-value"></span>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon"><i class="fas fa-book"></i></span>
+                                    <div class="detail-text">
+                                        <span class="detail-label">Páginas</span>
+                                        <span id="bookPages" class="detail-value"></span>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon"><i class="fas fa-bookmark"></i></span>
+                                    <div class="detail-text">
+                                        <span class="detail-label">Categoria</span>
+                                        <span id="bookCategoryDetail" class="detail-value"></span>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon"><i class="fas fa-calendar"></i></span>
+                                    <div class="detail-text">
+                                        <span class="detail-label">Ano</span>
+                                        <span id="bookYear" class="detail-value"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Player de Áudio -->
+        <section id="audioSection" class="audio-player hidden">
+            <div class="container">
+                <div class="player-card">
+                    <div class="player-info">
+                        <img id="playerCover" src="" alt="" class="player-cover">
+                        <div class="track-info">
+                            <h3 id="playerTitle"></h3>
+                            <p id="playerChapter">Capítulo 1</p>
+                        </div>
+                        <div class="player-controls">
+                            <button id="prevChapter" class="control-btn">
+                                <i class="fas fa-step-backward"></i>
+                            </button>
+                            <button id="rewind" class="control-btn">
+                                <i class="fas fa-backward"></i>
+                            </button>
+                            <button id="playPause" class="control-btn play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button id="forward" class="control-btn">
+                                <i class="fas fa-forward"></i>
+                            </button>
+                            <button id="nextChapter" class="control-btn">
+                                <i class="fas fa-step-forward"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="time-info">
+                            <span class="current-time">0:00</span>
+                            <span class="total-time">0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Seção Principal -->
+            <div class="footer-main">
+                <!-- Coluna 1: Logo e Descrição -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        Antônio <i class="fas fa-heart"></i> Maria
+                    </div>
+                    <p class="footer-desc">
+                        <span class="footer-highlight">AesaOnline</span> - Preservando e compartilhando o legado do Rev. Antônio Elias e Maria José Elias, 
+                        um casal que dedicou suas vidas ao serviço de Deus e à comunidade.
+                    </p>
+                </div>
+
+                <!-- Coluna 2: Links Rápidos -->
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/maria-jose.html">Profa. Maria José</a></li>
+                        <li><a href="pages/antonio-elias.html">Rev. Antônio Elias</a></li>
+                        <li><a href="sermoes.html">Sermões</a></li>
+                        <li><a href="esbocos.html">Esboços</a></li>
+                        <li><a href="livros.html">Livros</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Contato -->
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contato@antonioelias.org">contato@antonioelias.org</a>
+                        </li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linha de Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 AesaOnline - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/modules/livro.js"></script>
+    <script type="module" src="../js/modules/audio-livro.js"></script>
+</body>
+</html>

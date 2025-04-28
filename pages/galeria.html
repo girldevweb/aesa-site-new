@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AesaOnline</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 3rem;
+            color: #93c572; /* Verde estiloso */
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 700;
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste automático */
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px; /* Cantos arredondados */
+            overflow: hidden;
+            transition: transform 0.5s ease, box-shadow 0.5s ease; /* Animação suave */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra estilosa */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1); /* Zoom leve ao passar o mouse */
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05); /* Efeito de destaque */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao hover */
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Overlay escuro ao passar o mouse */
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1; /* Mostra o overlay no hover */
+        }
+
+        .gallery-item .overlay span {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem; /* Ajusta o título em telas menores */
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste para telas pequenas */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <a href="/" class="logo">Antônio <i class="fas fa-heart"></i> Maria</a>
+
+            <!-- Navegação Principal -->
+            <nav class="nav-desktop">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Biografias</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="antonio-elias.html">Rev. Antônio Elias</a></li>
+                            <li><a href="maria-jose.html">Profa. Maria José</a></li>
+                            <li><a href="historia-casal.html">História do Casal</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Sermões</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sermoes.html">Audios</a></li>
+                            <li><a href="videos.html">Videos</a></li>
+                            <li><a href="oracoes.html">Orações</a></li>
+                            
+                            
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Livros</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="livros.html">Biblioteca</a></li>
+                            <li><a href="esbocos.html">Esboços</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Depoimentos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/depoimentos-antonio">Cartas</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="/galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="/sobre" class="nav-link">Sobre Nós</a></li>
+                    
+                </ul>
+            </nav>
+
+            <!-- Barra de Pesquisa -->
+            <div class="search-container">
+                <button class="search-toggle" type="button" aria-label="Abrir pesquisa">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="search-box">
+                    <input type="text" placeholder="Pesquisar..." autocomplete="off" class="search-input">
+                    <div class="search-results"></div>
+                </div>
+            </div>
+
+            <!-- Botão Menu Mobile -->
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Menu Mobile -->
+            <nav class="nav-mobile">
+                <div class="mobile-search">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <ul class="mobile-nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Biografias</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="antonio-elias.html">Rev. Antônio Elias</a></li>
+                            <li><a href="maria-jose.html">Profa. Maria José</a></li>
+                            <li><a href="historia-casal.html">História do Casal</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Sermões</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sermoes.html">Audios</a></li>
+                            <li><a href="videos.html">Videos</a></li>
+                            <li><a href="oracoes.html">Orações</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="livros.html" class="nav-link">Livros</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="nav-link">Depoimentos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/depoimentos-antonio">Rev. Antônio Elias</a></li>
+                            <li><a href="/depoimentos-maria">Maria José</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="/sobre" class="nav-link">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="gallery-container">
+       <h1>Galeria</h1>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/AE e MJ states 1959-Recovered.jpg" alt="Descrição da foto 1">
+            </div>
+            <div class="gallery-item">
+                <img src="images/AE colegas de turma  seminario jubileu de prata1968 igreja presb de rio claro.jpg" alt="Descrição da foto 2">
+            </div>
+            <div class="gallery-item">
+                <img src="images/AE com Billy graham.jpg" alt="Descrição da foto 3">
+            </div>
+            <div class="gallery-item">
+                <img src="images/AE cristo esperança nossa aracaju1 set 1964.jpg" alt="Descrição da foto 4">
+            </div>
+            <div class="gallery-item">
+                <img src="images/AE em porto alegre inicio do trabalho.jpg" alt="Descrição da foto 5">
+            </div>
+            <div class="gallery-item">
+                <img src="images/AE e Teo ccom 2 anos Color.jpg" alt="Descrição da foto 5">
+            </div>
+            <div class="gallery-item">
+                <img src="images/AE convite EUA 1.jpg" alt="Descrição da foto 5">
+            </div>
+            <div class="gallery-item">
+                <img src="images/AE Convite EUA 2.jpg" alt="Descrição da foto 5">
+            </div>
+            <div class="gallery-item">
+                <img src="images/AE varias.jpg" alt="Descrição da foto 5">
+            </div>
+            <div class="gallery-item">
+                <img src="images/AE pregando.jpg" alt="Descrição da foto 5">
+            </div>
+            <!-- Adicione mais itens de galeria conforme necessário -->
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        <div class="footer-content">
+          <div class="footer-logo">AesaOnline</div>
+          <div class="quick-links">
+            <h3>Links Rápidos</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#biografia">Biografia</a></li>
+                <li><a href="sermoes.html">Sermões</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="cartas.html">Depoimentos</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+              </ul>
+          </div>
+          <div class="quick-links">
+            <h3>Ajuda</h3>
+            <ul>
+                <li><a href="index.html">Perguntas Frequentes</a></li>
+                
+            </ul>
+          </div>
+          <div class="quick-links">
+            <h3>Contato</h3>
+            <ul>
+              <li>aesaonline@gmail.com</li>
+            
+              
+            </ul>
+          </div>
+          <div class="social-media">
+            <h3>Siga-nos</h3>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            
+          </div>
+        </div>
+        <div class="copyright">
+          &copy; 2024 AesaOnline. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

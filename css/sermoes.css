@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+    --verde-principal: #93c572;
+    --verde-hover: #7ab555;
+    --cinza-escuro: #333333;
+    --cinza-medio: #666666;
+    --cinza-claro: #f8f8f8;
+    --branco: #ffffff;
+    --sombra-suave: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --fonte-titulo: 'Playfair Display', serif;
+    --fonte-texto: 'Roboto', sans-serif;
+}
+
+/* Layout Base */
+.sermoes {
+    padding: 2rem 0;
+    background-color: var(--branco);
+    margin-top: 80px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Layout das Colunas */
+.sermoes-layout {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 3rem;
+    background: var(--branco);
+    padding: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+}
+
+/* Coluna Esquerda */
+.coluna-esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.pregador-container {
+    text-align: center;
+}
+
+.pregador-imagem {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto 1.5rem;
+    border: 8px solid var(--branco);
+    box-shadow: var(--sombra-suave);
+    border-radius: 8px;
+}
+
+.pregador-container h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.2rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Barra de Progresso */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e0e0e0;
+    margin: 1.2rem 0;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.progress {
+    height: 100%;
+    background: var(--verde-principal);
+    border-radius: 3px;
+    transition: width 0.1s linear;
+}
+
+.tempo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: var(--cinza-medio);
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* Controles de Áudio */
+.controles-audio {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.controle-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: var(--verde-principal);
+    color: var(--branco);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--sombra-suave);
+}
+
+.controle-btn:hover {
+    background: var(--verde-hover);
+    transform: scale(1.05);
+}
+
+/* Coluna Direita */
+.coluna-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.search-sermoes {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    background: var(--branco);
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+}
+
+.search-sermoes input {
+    width: 100%;
+    padding: 1.2rem 3rem 1.2rem 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: var(--cinza-escuro);
+    transition: all 0.3s ease;
+    font-family: var(--fonte-texto);
+}
+
+.search-sermoes input:focus {
+    outline: none;
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 0 3px rgba(147, 197, 114, 0.1);
+}
+
+.search-sermoes input::placeholder {
+    color: #999;
+    font-weight: 300;
+}
+
+.search-sermoes button {
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--verde-principal);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.search-sermoes button:hover {
+    color: var(--verde-hover);
+}
+
+.playlist {
+    background: var(--branco);
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+    overflow-y: auto;
+    height: 500px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--verde-principal) #f0f0f0;
+}
+
+/* Estilização da scrollbar para Webkit */
+.playlist::-webkit-scrollbar {
+    width: 6px;
+}
+
+.playlist::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 8px;
+}
+
+.playlist::-webkit-scrollbar-thumb {
+    background-color: var(--verde-principal);
+    border-radius: 8px;
+}
+
+.playlist::-webkit-scrollbar-thumb:hover {
+    background-color: var(--verde-hover);
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.playlist-item:hover {
+    background: var(--cinza-claro);
+}
+
+.playlist-item.active {
+    background: rgba(147, 197, 114, 0.1);
+    color: var(--verde-principal);
+    font-weight: 500;
+}
+
+.playlist-item-info h4 {
+    font-family: var(--fonte-texto);
+    font-size: 1.1rem;
+    color: var(--cinza-escuro);
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .sermoes-layout {
+        grid-template-columns: 350px 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sermoes {
+        padding: 1.5rem 0;
+    }
+
+    .sermoes-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .pregador-container {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .pregador-imagem {
+        max-width: 250px;
+    }
+
+    .pregador-container h2 {
+        font-size: 1.1rem;
+    }
+
+    .controles-audio {
+        max-width: 300px;
+        margin: 1rem auto;
+    }
+
+    .playlist-item {
+        padding: 0.7rem 1rem;
+    }
+
+    .playlist-item-info h4 {
+        font-size: 1rem;
+    }
+
+    .search-sermoes input {
+        padding: 0.9rem 2.8rem 0.9rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .search-sermoes button {
+        right: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .playlist {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sermoes {
+        margin-top: 60px;
+    }
+
+    .sermoes-layout {
+        padding: 1rem;
+    }
+
+    .pregador-imagem {
+        max-width: 200px;
+        border-width: 4px;
+    }
+
+    .pregador-container h2 {
+        font-size: 1rem;
+    }
+
+    .controles-audio {
+        gap: 0.8rem;
+    }
+
+    .controle-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .search-sermoes {
+        margin-bottom: 1rem;
+    }
+
+    .search-sermoes input {
+        padding: 0.6rem 2.5rem 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .search-sermoes button {
+        right: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .playlist-item {
+        padding: 0.6rem 1rem;
+    }
+
+    .playlist-item-info h4 {
+        font-size: 0.95rem;
+    }
+
+    .playlist {
+        height: 350px;
+    }
+}
